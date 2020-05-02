@@ -6,8 +6,11 @@ using System.IO;
 /*
  *  Collide
  *  Eine Simulation im 2-dimensionalen Raum
- * 
- * 
+ *  Aufgabenverteilung
+ *  a) Hueber Noemi
+ *  b) Gross Patrick
+ *  c) Zöschg Thomas
+ *  d) Weiss Lukas
  * 
  * 2020 TFO-Meran
  */
