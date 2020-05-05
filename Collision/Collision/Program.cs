@@ -76,7 +76,7 @@ namespace ConsoleApplication1
                 if (Richtung == 2)
                 {
                     //Schaut ob es sich bereits ganz unten befindet
-                    if (posy == 50) //wenn, dann geht es einfach eine Zelle in die andere Richtung(hoch)
+                    if (posy == seite) //wenn, dann geht es einfach eine Zelle in die andere Richtung(hoch)
                     {
                         posy--;
                     }
@@ -103,7 +103,7 @@ namespace ConsoleApplication1
                 if (Richtung == 4)
                 {
                     //Schaut ob es sich bereits ganz rechts befindet
-                    if (posx == 50)//wenn, dann geht es einfach eine Zelle in die andere Richtung(links)
+                    if (posx == seite)//wenn, dann geht es einfach eine Zelle in die andere Richtung(links)
                     {
                         posx--;
                     }
