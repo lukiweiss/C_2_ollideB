@@ -57,29 +57,64 @@ namespace ConsoleApplication1
                 //schreibt eine 0 auf die Position, wo es sich gerade befand
                 feld[posx, posy] = 0;
 
+                #region Position festlegen
                 //Neue Position festlegen
                 //Eine Zelle hoch
                 if (Richtung == 1)
                 {
-                    posy++;
+                    //Schaut ob es sich bereits ganz oben befindet
+                    if (posy == 0)  //wenn, dann geht es einfach eine Zelle in die andere Richtung(runter)
+                    {
+                        posy++;
+                    }
+                    else  //wenn nicht, dann ganz normal eine Zelle nach oben
+                    {
+                        posy--;
+                    }
                 }
                 //Eine Zelle runter
                 if (Richtung == 2)
                 {
-                    posy--;
+                    //Schaut ob es sich bereits ganz unten befindet
+                    if (posy == 50) //wenn, dann geht es einfach eine Zelle in die andere Richtung(hoch)
+                    {
+                        posy--;
+                    }
+                    else  //wenn nicht, einfach ganz normal eine Zelle nach unten
+                    {
+                        posy++;
+                    }
                 }
                 //Eine Zelle nach links
                 if (Richtung == 3)
                 {
-                    posx--;
+                    //Schaut ob es sich bereits ganz links befindet
+                    if (posx == 0)  //wenn, dann geht es einfach eine Zelle in die andere Richtung(rechts)
+                    {
+                        posx++;
+                    }
+                    else  //wenn nicht, einfach ganz normal eine Zelle nach links
+                    {
+                        posx--;
+                    }            
+                    
                 }
                 //Eine Zelle nach rechts
                 if (Richtung == 4)
                 {
-                    posx++;
+                    //Schaut ob es sich bereits ganz rechts befindet
+                    if (posx == 50)//wenn, dann geht es einfach eine Zelle in die andere Richtung(links)
+                    {
+                        posx--;
+                    }
+                    else  //wenn nicht, einfach ganz normal eine Zelle nach rechts
+                    {
+                        posx++;
+                    }                    
                 }
                 else
                 { }
+                #endregion
 
                 //Schaut ob sich auf dieser Position bereits ein Objekt befindet oder nicht
                 if (feld[posx, posy] == 0)  //wenn nicht, dann zeige es auf dieser Position an, und schreibe auf dieser Position eine 1
